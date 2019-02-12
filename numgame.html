@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Number Game</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" href="game_icon.png">
+		<script src="numgame.js"></script>
+	</head>
+	<body bgcolor=#3f4551>
+		<div class="homebar"> 
+			<a class="baroption" href="other.html" >other software</a>
+			<a class="baroption" href="learn.html" >learning materials</a>
+			<a class="baroption" href="games.html" >games</a>
+			<a class="baroption" href="apps.html" >apps</a>
+			<a class="baroption" href="index.html" >home</a>
+			<img class="logo" src="logo.png" alt="logo">
+			<a class="logobar">tecton</a>
+		</div>
+		<div class="first_box" align="center">
+			<h1>Number Game</h1>
+			<input id="1" type="text" />
+			<button onclick="guess()" >Input Guess</button>
+			<br/><br/>
+			<button onclick="ans(0)">Reset Easy(1-100)</button>
+			<button onclick="ans(1)">Reset Medium(1-500)</button>
+			<button onclick="ans(2)">Reset Hard(1-1000)</button>
+			<p id="text">Number Guessing Game(Click a Difficulty)</p>
+			<p id="tries"></p>
+		</div>
+	</body>
+</html>
