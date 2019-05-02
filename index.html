@@ -8,6 +8,7 @@
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
         <link rel="icon" href="tecton_noname.png">
         <script src="particles.js"></script>
+				<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     </head>
     <body>
         <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
@@ -23,11 +24,14 @@
             </div>
             <div id="navMenu" class="navbar-menu">
                 <div class="navbar-start">
-                    <a href="#particle-js" class="navbar-item">
+                    <a data-scroll href="#particle-js" class="navbar-item">
                     Home
                     </a>
-                    <a href="#about" class="navbar-item">
+                    <a data-scroll href="#about" class="navbar-item">
                     About
+                    </a>
+										<a data-scroll href="#projects" class="navbar-item">
+                    Projects
                     </a>
                 </div>
             </div>
@@ -47,11 +51,13 @@
                     </div>
                 </div>
             </div>
-						<div class="hero-foot">
+						<div class="hero-foot" style="z-index:1;">
 								<div class="columns">
 									<div class="column is-one-third"></div>
 									<div class="column is-one-third has-text-centered">
+										<a data-scroll href="#about">
 											<i class="fas fa-chevron-down fa-4x bounce"></i>
+										</a>
 									</div>
 								<div class="column is-one-third"></div>
 								</div>
@@ -67,6 +73,68 @@
                 </div>
             </div>
         </div>
+				<div id="projects" class="hero is-medium is-warning">
+					<div class="hero-body has-text-centered">
+						<h1 class="title has-text-light is-2">Projects</h1>
+						<h1 class="subtitle has-text-light">A few of tecton's projects</h1>
+						<div class="columns">
+                    <div class="column">
+                        <div class="box is-primary has-text-centered">
+                            <p class="title">ExtempWebDownloader</p>
+                            <p class="column-body">This is a resource where you can mass download and update articles for extemp. All you need to do is run the updater.py file and it will downlaod all the html files on many websites. This will take some time so be able to wait. you just have to run it again to update all the articles! This is good if you like to read the news of if you are in Extemp and need to mass download articles for a competition!</p>
+                            <img src="http://geekportfolio.tk/python_web.png" style="height:100px; border-radius: 10px; margin: 10px;">
+                            <a href="https://github.com/Hacker719/ExtempWebDownloader" class="button is-medium is-fullwidth is-outlined is-dark">Visit Github Repo</a>
+                            <br>
+                            <a href="https://github.com/Hacker719/ExtempWebDownloader/archive/master.zip" class="button is-medium is-fullwidth is-outlined is-dark">Download</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box is-primary has-text-centered">
+                            <p class="title">tecton.tk</p>
+                            <p class="column-body">Tecton is a website I started to show off some of my projects. I dont really focus too much on design there, but I try to add content. Currently I have a few simple games I tried to make, and hope to increase in skill. I also added it to give a few learning materials to the public. One of them is a really good book you can get the pdf for to learn Swift!</p>
+                            <img src="http://geekportfolio.tk//logo.png" style="height:150px;">
+                            <a href="https://www.tecton.tk" class="button is-medium is-fullwidth is-outlined is-dark">Visit</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="box is-primary has-text-centered">
+                            <p class="title">RecycleSmart</p>
+                            <p class="column-body">Have you EVER been confused about what to put in recycling? compost? or most or all, trash? Well RecycleSmart solves this problem! with CoreML machine learning technology, it is able to differentiate your recyclables, compost, and trash! And best of all, it is completly free to use and is extremely accesible! All you have to do is search it up on the app store and download the app!(still pending approval)</p>
+                            <img src="https://smartrecycle.tecton.tech/icon.png" style="height:100px; margin: 10px;">
+                            <a href="https://smartrecycle.tecton.tech" class="button is-medium is-fullwidth is-outlined is-dark">Visit Website</a>
+                            <br>
+                            <a href="https://github.com/Hacker719/RecycleSmartApp" class="button is-medium is-fullwidth is-outlined is-dark">Visit Github Repo</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box is-primary has-text-centered">
+                            <p class="title">TeamViewer</p>
+                            <p class="column-body">Do you work in a team? Have you had any managment problems, or something like that? You might like my node.js project! TeamViewer is a web app for people to be able to know where people are working, and where, in one app. It takes the inputs into a json file and is then able to display it! This can be used for other things, like for school, work, or even just family attendance!</p>
+                            <img src="https://apollomics.herokuapp.com/compass.png" style="height:120px;">
+                            <a href="https://github.com/Hacker719/TeamViewer" class="button is-medium is-fullwidth is-outlined is-dark">Visit Github Repo</a>
+                            <br>
+                            <a href="https://github.com/Hacker719/TeamViewer/archive/master.zip" class="button is-medium is-fullwidth is-outlined is-dark">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="box is-primary has-text-centered">
+                            <p class="title">Pyramid</p>
+                            <p class="column-body">Have you ever been bored somewhere where you really wanted to play pencil games, but you didn't have paper, or it wasn't approriate? Well then Pyramid is the right app for you! It currently has 4 games witrh a free draw! This includes, Tic-Tac-Toe, Big-Tac-Toe, Dots & Boxes, and the ultimate game, Pyramid! This can (hopefully) be found on the app store for free!</p>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Pyramid_icon.svg/1203px-Pyramid_icon.svg.png" style="height:100px; margin: 10px;">
+                            <a href="https://hacker719.github.io/Pyramid/" class="button is-medium is-fullwidth is-outlined is-dark">Visit Website</a>
+                            <br>
+                            <a href="https://github.com/Hacker719/Pyramid" class="button is-medium is-fullwidth is-outlined is-dark">Visit Github Repo</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                    </div>
+                </div>
+            </div>
+				</div>
         <div class="footer">
             <div class="container has-text-centered">
                 <h1 class="title is-5">Open Source, Open Ideas</h1>
@@ -110,24 +178,18 @@
         this.tick();
         this.isDeleting = false;
     };
-
     TxtType.prototype.tick = function() {
         var i = this.loopNum % this.toRotate.length;
         var fullTxt = this.toRotate[i];
-
         if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
         } else {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
-
         this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
         var that = this;
         var delta = 200 - Math.random() * 100;
-
         if (this.isDeleting) { delta /= 2; }
-
         if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
         this.isDeleting = true;
@@ -136,12 +198,10 @@
         this.loopNum++;
         delta = 500;
         }
-
         setTimeout(function() {
         that.tick();
         }, delta);
     };
-
     window.onload = function() {
         var elements = document.getElementsByClassName('typewrite');
         for (var i=0; i<elements.length; i++) {
@@ -157,6 +217,11 @@
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
         document.body.appendChild(css);
     };
+		
+		 var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 450
+});
         </script>
+				
     </body>
 </html>
