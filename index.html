@@ -1,35 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-		<meta name="google-site-verification" content="IcGC8-S7mlW7QBr6f3rS0_DopQTvN-F2X7WSm5DKdW8" />
-		<link rel="icon" href="logo.png">
-    <meta name="viewport" content="width=device-width">
-    <title>tecton</title>
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body bgcolor=#3f4551>
-		<div class="homebar"> 
-			<a class="baroption" href="other.html" >other software</a>
-			<a class="baroption" href="learn.html" >learning materials</a>
-			<a class="baroption" href="games.html" >games</a>
-			<a class="baroption" href="apps.html" >apps</a>
-			<a class="baroption" href="index.html" >home</a>
-			<img class="logo" src="logo.png" alt="logo">
-			<a class="logobar">tecton</a>
-		</div>
-		<div align="center" class="first_box">
-			<h1>What is this?</h1>
-			<p>Tecton is a open source website and place where I am currently storing most of my projects and programs that I make. I try to make new programs that have the
-				ability to change the world. I really love coding and Computer Science. The Languages I currently know are: </p>
-			<ul>
-				<li>Python</li>
-				<li>C</li>
-				<li>JavaScript</li>
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>Linux Bash</li>
-			</ul>
-		</div>
-		<p class="footer">Have any questions or bugs to report? Contact me at <a href="mailto:tectonroot@gmail.com">tectonroot@gmail.com</a></p>
-  </body>
+    <head>
+        <title>tecton</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <link rel="icon" href="tecton_noname.png">
+        <script src="particles.js"></script>
+    </head>
+    <body>
+        <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a href="/" class="navbar-item">
+                <img src="tecton_noname.png" alt="tecton" >
+                </a>
+                <span id="nav-toggle" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                </span>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="/" class="navbar-item is-active">
+                    Home
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div id="particle-js" class="hero is-fullheight is-link">
+					<div class="hero-head"></div>
+            <div class="hero-body" style="z-index:1;">
+                <div class="container has-text-center">
+                    <div class="columns is-centered">
+                        <div class="column"></div>
+                        <div class="column has-text-centered">
+                                <img class="image is-128x128" src="tecton_logo.png">
+                            <h1 class="subtitle">Open source, Open Ideas</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, magnam culpa inventore reiciendis saepe quod fugit aliquam. Hic eius sint corporis voluptatum amet ipsa dolores assumenda quis, in delectus error.</p>
+                        </div>
+                        <div class="column"></div>
+                    </div>
+                </div>
+            </div>
+						<div class="hero-foot">
+								<div class="columns">
+									<div class="column is-one-third"></div>
+									<div class="column is-one-third has-text-centered">
+											<i class="fas fa-chevron-down fa-4x bounce"></i>
+									</div>
+								<div class="column is-one-third"></div>
+								</div>
+						</div>
+        </div>
+        <script>
+            particlesJS.load('particle-js','particles.json',function() {
+                console.log('LOADED PARTICLES');
+            });
+            (function() {
+            var burger = document.querySelector('#nav-toggle');
+            var menu = document.querySelector('.navbar-menu');
+            burger.addEventListener('click', function() {
+                burger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+            });
+            })();
+        </script>
+    </body>
 </html>
