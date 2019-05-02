@@ -10266,7 +10266,9 @@ label.panel-block:hover {
 .hero.is-warning strong {
   color: inherit;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 .hero.is-warning .title {
   color: rgba(0, 0, 0, 0.7);
 }

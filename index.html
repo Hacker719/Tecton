@@ -12,7 +12,7 @@
     <body>
         <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a href="/" class="navbar-item">
+                <a href="#particle-js" class="navbar-item">
                 <img src="tecton_noname.png" alt="tecton" >
                 </a>
                 <span id="nav-toggle" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -23,8 +23,11 @@
             </div>
             <div id="navMenu" class="navbar-menu">
                 <div class="navbar-start">
-                    <a href="/" class="navbar-item is-active">
+                    <a href="#particle-js" class="navbar-item">
                     Home
+                    </a>
+                    <a href="#about" class="navbar-item">
+                    About
                     </a>
                 </div>
             </div>
@@ -38,7 +41,7 @@
                         <div class="column has-text-centered">
                                 <img class="image is-128x128" src="tecton_logo.png">
                             <h1 class="subtitle">Open Source, Open Ideas</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, magnam culpa inventore reiciendis saepe quod fugit aliquam. Hic eius sint corporis voluptatum amet ipsa dolores assumenda quis, in delectus error.</p>
+                            <p>tecton is a place where we develop things for fun. Everything you see on here is open source and free to use, from our apps, to our applications! </p>
                         </div>
                         <div class="column"></div>
                     </div>
@@ -53,6 +56,16 @@
 								<div class="column is-one-third"></div>
 								</div>
 						</div>
+        </div>
+        <div id="about" class="hero is-dark is-large">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title is-1">tecton, We are, <a href="" class="typewrite has-text-danger" data-period="2000" data-type='[ "INNOVATIVE","CREATIVE","WEIRD","FREE","OPEN SOURCE","COLLABORATIVE","PASSION","DEDICATION" ]'><span class="wrap"></span></a></h1>
+                    <p>        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam eligendi impedit recusandae voluptates eius, nemo nostrum fugit, excepturi eos qui nam ducimus in repellat quasi rerum dolorum! Doloremque, distinctio vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolorum iure eum, cumque vero reiciendis aliquid laudantium voluptas nulla excepturi magni quibusdam necessitatibus temporibus consectetur blanditiis sint quisquam sequi totam.</p>
+                    <br><br>
+                    <p>        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam eligendi impedit recusandae voluptates eius, nemo nostrum fugit, excepturi eos qui nam ducimus in repellat quasi rerum dolorum! Doloremque, distinctio vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolorum iure eum, cumque vero reiciendis aliquid laudantium voluptas nulla excepturi magni quibusdam necessitatibus temporibus consectetur blanditiis sint quisquam sequi totam.</p>
+                </div>
+            </div>
         </div>
         <div class="footer">
             <div class="container has-text-centered">
@@ -72,6 +85,8 @@
                     </div>
                 </div>
                 <p>© tecton 2019</p>
+                <h1 class="title has-text-dark">
+                </h1>
             </div>
         </div>
         <script>
@@ -86,6 +101,62 @@
                 menu.classList.toggle('is-active');
             });
             })();
+            var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
         </script>
     </body>
 </html>
