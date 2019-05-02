@@ -10266,9 +10266,6 @@ label.panel-block:hover {
 .hero.is-warning strong {
   color: inherit;
 }
-html {
-    scroll-behavior: smooth;
-  }
 .hero.is-warning .title {
   color: rgba(0, 0, 0, 0.7);
 }
@@ -10570,5 +10567,8 @@ html {
     50% { top: -0.2em; }
     70% { top: -0.3em; }
     100% { top: 0; }
+}
+html {
+    scroll-behavior: smooth !important;
 }
 /*# sourceMappingURL=bulma.css.map */
