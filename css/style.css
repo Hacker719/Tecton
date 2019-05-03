@@ -4562,8 +4562,8 @@ fieldset[disabled] .select select:hover {
 }
 
 .image.is-48x48 {
-  height: 48px;
-  width: 48px;
+  height: 64px;
+  width: 64px;
 }
 
 .image.is-64x64 {
