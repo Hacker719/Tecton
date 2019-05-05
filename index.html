@@ -10,6 +10,7 @@
     <link rel="icon" href="public/tecton_noname.png">
     <script src="particles.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
@@ -81,23 +82,23 @@
     <div id="about" class="hero is-dark is-large">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h1 class="title is-1">tecton</h1>
-                <h1 class="title is-3 has-text-light">We are <a href="" class="typewrite has-text-danger"
+                <h1 class="title top is-1">tecton</h1>
+                <h1 class="title top is-3 has-text-light">We are <a href="" class="typewrite has-text-danger"
                         data-period="2000"
                         data-type='[ "INNOVATIVE","CREATIVE","WEIRD","FREE","OPEN SOURCE","COLLABORATIVE","PASSIONATE","DEDICATED" ]'><span
                             class="wrap"></span></a></h1>
-                <p>tecton is a company which creates open source code and applications for developers and end users to
+                <p class="top" >tecton is a company which creates open source code and applications for developers and end users to
                     use! These applications vary from a debate downloader, to a recycling app to sort your recyclables.
                     These programs can help change the world, and change our schools! The technologies by tetcon are
                     made to change people's lives and for the better. This is why we can have <strong>YOU</strong> give
                     <strong>US</strong> ideas on what you want made! Just fill out the form bellow!</p>
                 <br><br>
-                <p>Anything that tecton makes or produces, is, and will always be <strong>FREE</strong> and open source,
+                <p class="top">Anything that tecton makes or produces, is, and will always be <strong>FREE</strong> and open source,
                     with everything having a GNU AGPLv3 or a GNU GPLv3 license, everything is going to be free and most
                     important, easy to change. With a strong copyleft license, anybody can help improve our products
                     too! If you also have any ideas for projects, please fill out the form below!</p> <br><br>
                 <a href="https://neelredkar.typeform.com/to/PFUamx" style="width:50%;"
-                    class="button is-danger is-inverted is-outlined">
+                    class="top button is-danger is-inverted is-outlined">
                     <p class="title is-5">Idea Form</p>
                 </a>
             </div>
@@ -105,10 +106,10 @@
     </div>
     <div id="projects" class="hero is-medium is-warning is-bold">
         <div class="hero-body has-text-centered">
-            <h1 class="title has-text-light is-2">Projects</h1>
-            <h1 class="subtitle has-text-light">A few of tecton's projects</h1>
+            <h1 class="title pro has-text-light is-2">Projects</h1>
+            <h1 class="subtitle pro has-text-light">A few of tecton's projects</h1>
             <div class="columns is-multiline">
-                <div class="column is-half">
+                <div class="column pro is-half">
                     <div class="box is-primary has-text-centered">
                         <p class="title is-4">terapeut</p>
                         <p class="column-body">terapeut is the online therapist open to anyone. terapeut enables you to
@@ -128,7 +129,7 @@
                             class="button is-medium is-fullwidth is-outlined is-dark">Download App</a>
                     </div>
                 </div>
-                <div class="column is-half">
+                <div class="column pro is-half">
                     <div class="box is-primary has-text-centered">
                         <p class="title is-4">DVPC</p>
                         <p class="column-body">DVPC is a summer class that is hosted by tecton! This is a class where
@@ -144,7 +145,7 @@
                             class="button is-medium is-fullwidth is-outlined is-dark">Sign-up Form</a>
                     </div>
                 </div>
-                <div class="column is-half">
+                <div class="column pro is-half">
                     <div class="box is-primary has-text-centered">
                         <p class="title is-4">Pyramid</p>
                         <p class="column-body">Have you ever been bored somewhere where you really wanted to play pencil
@@ -161,7 +162,7 @@
                             class="button is-medium is-fullwidth is-outlined is-dark">Visit Github Repo</a>
                     </div>
                 </div>
-                <div class="column is-half">
+                <div class="column pro is-half">
                     <div class="box is-primary has-text-centered">
                         <p class="title is-4">Extemp International Database</p>
                         <p class="column-body">This is a resource where you can mass download and update articles for
@@ -177,7 +178,7 @@
                             class="button is-medium is-fullwidth is-outlined is-dark">Download</a>
                     </div>
                 </div>
-                <div class="column is-half">
+                <div class="column pro is-half">
                     <div class="box is-primary has-text-centered">
                         <p class="title is-4">RecycleSmart</p>
                         <p class="column-body">Have you EVER been confused about what to put in recycling? compost? or
@@ -193,7 +194,7 @@
                             class="button is-medium is-fullwidth is-outlined is-dark">Visit Github Repo</a>
                     </div>
                 </div>
-                <div class="column is-half">
+                <div class="column pro is-half">
                     <div class="box is-primary has-text-centered">
                         <p class="title is-4">TeamViewer</p>
                         <p class="column-body">Do you work in a team? Have you had any managment problems, or something
@@ -366,6 +367,10 @@
         var scroll = new SmoothScroll('a[href*="#"]', {
             speed: 450
         });
+        ScrollReveal().reveal('.pro', { 	interval: 100,
+	reset: true});
+        ScrollReveal().reveal('.top',{	interval: 100,
+    reset: true});
     </script>
 
 </body>
