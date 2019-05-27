@@ -20,11 +20,11 @@
   }
 }
 :root {
-    --new-black:rgb(58, 54, 54);
+    --new-black:#252222;
     --dark-select: rgb(78, 76, 76);
     --primary: rgb(50, 94, 214);
-    --orange-color: #FF6600;
-    --info: #2f7bad;
+    --orange-color: #8d311e;
+    --info: #201d1d;
 }
 .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,
 .pagination-next,
@@ -10328,7 +10328,7 @@ label.panel-block:hover {
 }
 
 .hero.is-warning.is-bold {
-  background-image: linear-gradient(141deg, #ffaf24 0%, var(--orange-color) 71%);
+  background-image: linear-gradient(141deg, #eb710e 0%, var(--orange-color) 71%);
 }
 
 @media screen and (max-width: 768px) {
