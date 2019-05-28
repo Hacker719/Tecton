@@ -22,7 +22,7 @@
 :root {
     --new-black:#252222;
     --dark-select: rgb(78, 76, 76);
-    --primary: rgb(50, 94, 214);
+    --primary: #ff461f;
     --orange-color: #8d311e;
     --info: #201d1d;
 }
@@ -228,7 +228,9 @@
 .is-active.pagination-ellipsis {
   outline: none;
 }
-
+.fa-2x :hover {
+  color: #f3907c;
+}
 .button[disabled], .input[disabled],
 .textarea[disabled], .select select[disabled], .file-cta[disabled],
 .file-name[disabled], .pagination-previous[disabled],
@@ -7036,7 +7038,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
 }
 
 .navbar-item img {
-  max-height: 1.75rem;
+  max-height: 3rem;
 }
 
 .navbar-item.has-dropdown {
