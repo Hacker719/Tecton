@@ -2066,7 +2066,7 @@ fieldset[disabled] .button.is-dark.is-inverted.is-outlined {
 }
 
 .button.is-primary:hover, .button.is-primary.is-hovered {
-  background-color: #00c4a7;
+  background-color: #f38974;
   border-color: transparent;
   color: #fff;
 }
@@ -6899,7 +6899,7 @@ a.list-item {
 .navbar.is-fixed-bottom, .navbar.is-fixed-top {
   left: 0;
   position: fixed;
-  right: 0;
+  right: 0.7rem;
   z-index: 30;
 }
 
@@ -7038,7 +7038,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
 }
 
 .navbar-item img {
-  max-height: 3rem;
+  max-height: 2rem;
 }
 
 .navbar-item.has-dropdown {
