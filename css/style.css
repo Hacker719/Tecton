@@ -26,6 +26,9 @@
     --orange-color: #8d311e;
     --info: #201d1d;
 }
+.hero,.navbar {
+  width: 100vw;
+}
 .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,
 .pagination-next,
 .pagination-link,
@@ -7238,6 +7241,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
   .navbar-end {
     justify-content: flex-end;
     margin-left: auto;
+    margin-right: 25px;
   }
   .navbar-dropdown {
     background-color: white;
